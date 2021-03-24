@@ -1,0 +1,22 @@
+<h1><%= @scientist.name %></h1>
+Field of study: <%= @scientist.field_of_study %><br>
+<br>
+<table>
+  <tr><th>Planet Visited</th><th>Mission</th></tr>
+  <% @scientist.missions.each do |mission| %>
+    <tr>
+      <td>
+        <%= mission.planet.name %>
+      </td>
+      <td>
+        <%= mission.name %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<hr>
+Add a <%= link_to "mission", new_mission_path(@scientist.id) %><br>
+<%= link_to "Edit this scientist", edit_scientist_path(@scientist) %><br>
+Add a <%= link_to "new scientist", new_scientist_path %><br>
+<%= link_to "Delete this scientist", scientist_path(@scientist), method: :delete, data: { confirm: "Are you sure? #{@scientist.name} will be gone forever!"} %><br>
+See <%= link_to "all scientists", scientists_path %>

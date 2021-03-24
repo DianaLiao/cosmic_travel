@@ -1,0 +1,11 @@
+<h1>Add a Mission</h1>
+<%= render 'shared/errors' %>
+<%= form_for @mission do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label "Which scientist is on this mission?" %>
+  <%= f.collection_select :scientist_id, @scientists, :id, :name %><br>
+  <%= f.label "Which planet are they visiting?" %>
+  <%= f.collection_select :planet_id, @planets, :id, :name %><br>
+  <%= f.submit "Away we go!" %>
+<% end %>

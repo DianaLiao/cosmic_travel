@@ -28,9 +28,9 @@ planet_images = [
                         nearest_star: Faker::Space.star,
                         planet_img: planet_images.sample)}
 
-# 15.times {Scientist.create(name: Faker::FunnyName.name,
-#                            field_of_study: Faker::Educator.subject)}
+15.times {Scientist.create(name: Faker::FunnyName.name,
+                           field_of_study: Faker::Educator.subject)}
 
-# 20.times {Mission.create(name: Faker::TvShows::Buffy.unique.episode,
-#                          scientist_id: Scientist.all.sample.id, 
-#                          planet_id: Planet.all.sample.id)}
+20.times {Mission.create(name: Faker::TvShows::Buffy.unique.episode,
+                         scientist_id: Scientist.all.sample.id, 
+                         planet_id: Planet.all.sample.id)}

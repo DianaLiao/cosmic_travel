@@ -1,0 +1,8 @@
+<h1>Edit Scientist</h1>
+
+<%= render 'shared/errors' %>
+
+<%= render 'form' %>
+<hr>
+Return to <%= link_to "#{@scientist.name}'s page", scientist_path(@scientist) %><br>
+See <%= link_to "all scientists", scientists_path %>
